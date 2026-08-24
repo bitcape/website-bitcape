@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/astro.config.mjs">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/astro.config.mjs" />
+              <option name="originalContent" value="// @ts-check&#10;import { defineConfig } from 'astro/config';&#10;&#10;// https://astro.build/config&#10;export default defineConfig({&#10;  // The public URL of the site. For a GitHub Pages *project* site this is the&#10;  // account's github.io domain; `base` is the repository name.&#10;  // When a custom domain is added later, set `site` to it and change `base` to '/'.&#10;  site: 'https://bitcape.github.io',&#10;  base: '/website-bitcape',&#10;&#10;  // Astro is a static site generator by default (output: 'static'),&#10;  // which produces plain HTML/CSS/JS suitable for GitHub Pages.&#10;});&#10;&#10;" />
+              <option name="updatedContent" value="// @ts-check&#10;import { defineConfig } from 'astro/config';&#10;&#10;// https://astro.build/config&#10;export default defineConfig({&#10;  // The public URL of the site. Now that a custom domain (bitcape.ch) is&#10;  // configured, the site is served from the root, so `site` is the domain and&#10;  // `base` is '/'. The custom domain is set via the public/CNAME file.&#10;  site: 'https://bitcape.ch',&#10;  base: '/',&#10;&#10;  // Astro is a static site generator by default (output: 'static'),&#10;  // which produces plain HTML/CSS/JS suitable for GitHub Pages.&#10;});&#10;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/public/CNAME">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/public/CNAME" />
+              <option name="newFile" value="true" />
+              <option name="updatedContent" value="bitcape.ch&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
