@@ -35,7 +35,7 @@ The hero background image is set via the `.hero::before` rule in
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) 18.20.8 or newer (20+ recommended)
+- [Node.js](https://nodejs.org/) `20.19+`, `22.12+`, or `24+` (required by Astro 7)
 - npm (bundled with Node.js)
 
 ## Getting started
