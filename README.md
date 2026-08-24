@@ -75,8 +75,34 @@ Run Astro's type and content checks:
 npm run check
 ```
 
+## Deployment (GitHub Pages)
+
+The site deploys to GitHub Pages via GitHub Actions
+(`.github/workflows/deploy.yml`). Deployment is **manual** — pushing to `main`
+does **not** publish. You trigger a release yourself when you're ready.
+
+One-time setup in the GitHub repository:
+
+1. Go to **Settings → Pages**.
+2. Under **Build and deployment → Source**, select **GitHub Actions**.
+
+To deploy:
+
+- **GitHub UI:** open the **Actions** tab → **Deploy to GitHub Pages** workflow
+  → **Run workflow** → choose the `main` branch → **Run workflow**.
+- **GitHub CLI:** `gh workflow run "Deploy to GitHub Pages" --ref main`
+
+The live URL will be:
+
+```
+https://bitcape.github.io/website-bitcape/
+```
+
+The `site` and `base` values in `astro.config.mjs` are configured for this
+project-page URL. When a custom domain is added later, set `site` to the domain
+and change `base` back to `'/'`.
+
 ## Notes
 
-- Deployment to GitHub Pages will be configured as a separate step.
 - The custom domain, email and hosting are intentionally not configured yet.
-- Update the `site` URL in `astro.config.mjs` once the final domain is known.
+- Update the `site`/`base` in `astro.config.mjs` when moving to a custom domain.

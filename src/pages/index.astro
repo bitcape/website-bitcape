@@ -1,11 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../data/site';
+
+// Resolve the hero image against the configured `base` so it works on
+// GitHub Pages project sites as well as at the root / a custom domain.
+const heroImage =
+  import.meta.env.BASE_URL.replace(/\/$/, '') + '/mx_keys.jpg';
 ---
 
 <BaseLayout>
-  <section class="hero">
-    <!-- Background image goes here later (see .hero::before in the styles). -->
+  <section class="hero" style={`--hero-image: url('${heroImage}')`}>
     <div class="hero__content">
       <h1 class="hero__name">{site.title}</h1>
       <p class="hero__subtitle">{site.subtitle}</p>
@@ -28,13 +32,13 @@ import { site } from '../data/site';
     background-color: var(--color-bg);
   }
 
-  /* Hero background image. */
+  /* Hero background image (path provided via the --hero-image variable). */
   .hero::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-image: url('/mx_keys.jpg');
+    background-image: var(--hero-image);
     background-size: cover;
     background-position: center;
   }
