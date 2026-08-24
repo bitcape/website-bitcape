@@ -1,0 +1,39 @@
+---
+/**
+ * Base layout for the one-pager.
+ * Provides the HTML document shell, SEO metadata and global styles.
+ */
+import { site } from '../data/site';
+import SEO from '../components/SEO.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description, image } = Astro.props;
+---
+
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <SEO title={title} description={description} image={image} />
+    <!-- Ubuntu font (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+    />
+  </head>
+  <body>
+    <main id="main-content">
+      <slot />
+    </main>
+  </body>
+</html>
+
+
+

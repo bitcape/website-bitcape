@@ -1,0 +1,113 @@
+/* =========================================================
+   Design tokens — dark + sand palette
+   Deliberately small and easy to evolve later.
+   ========================================================= */
+:root {
+  /* Dark base */
+  --color-bg: #17130d;
+  --color-bg-2: #241d13;
+  --color-overlay: rgba(15, 12, 8, 0.55);
+
+  /* Sand tones */
+  --color-sand: #e7d6b3;
+  --color-sand-muted: #b7a684;
+  --color-sand-strong: #f2e6c9;
+
+  /* Semantic */
+  --color-text: var(--color-sand);
+  --color-heading: var(--color-sand-strong);
+  --color-muted: var(--color-sand-muted);
+  --color-accent: var(--color-sand);
+  --color-accent-contrast: #17130d;
+
+  /* Typography */
+  --font-sans: 'Ubuntu', system-ui, -apple-system, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+
+  /* Fluid type scale */
+  --step-0: clamp(1.15rem, 1.05rem + 0.4vw, 1.375rem);
+  --step-1: clamp(1.4rem, 1.25rem + 0.7vw, 1.75rem);
+  --step-3: clamp(2.4rem, 1.8rem + 2.8vw, 4.25rem);
+
+  /* Spacing & layout */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --radius: 999px;
+}
+
+/* =========================================================
+   Base / reset
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans), sans-serif;
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-heading);
+}
+
+p {
+  margin: 0;
+}
+
+/* Visible keyboard focus for accessibility */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   Button — "button-62" style, sand colour scheme
+   ========================================================= */
+.button {
+  background: transparent;
+  border: 1px solid var(--color-sand);
+  border-radius: 12px;
+  color: var(--color-sand-strong);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button:not([disabled]):focus,
+.button:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(183, 166, 132, 0.5),
+    0.125rem 0.125rem 1rem rgba(242, 230, 201, 0.5);
+}
+
+
+
+
