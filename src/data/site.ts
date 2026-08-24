@@ -15,7 +15,7 @@ export const site = {
   /** Author / owner name used in meta tags. */
   author: 'Bitcape',
   /** Contact email used by the "Contact" button (mailto link). */
-  email: 'hello@example.com',
+  email: 'info@bitcape.ch',
   /** Default social sharing image (relative to the site root). */
   ogImage: '/favicon.svg',
   /** Language of the site content. */
