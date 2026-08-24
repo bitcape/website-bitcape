@@ -8,6 +8,7 @@ The personal website for **Bitcape** — a minimal, statically generated
 - **[Astro](https://astro.build/)** — static site generator (outputs plain HTML/CSS/JS)
 - **TypeScript** — type-safe configuration and components
 - **Modern HTML & CSS** — responsive, dark + sand palette, no CSS framework
+- **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)** — web font loaded via Google Fonts
 - **npm** — package management
 
 No frontend framework (React/Vue/Svelte), no backend and no database — the site
@@ -19,7 +20,7 @@ is intentionally simple and easy to evolve.
 .
 ├── astro.config.mjs        # Astro configuration
 ├── tsconfig.json           # TypeScript configuration (Astro strict preset)
-├── public/                 # Static assets served as-is (favicon, robots.txt)
+├── public/                 # Static assets served as-is (favicon, robots.txt, hero image)
 └── src/
     ├── components/SEO.astro # Reusable SEO metadata component
     ├── data/site.ts         # Central config: name, subtitle, tagline, email
@@ -29,8 +30,8 @@ is intentionally simple and easy to evolve.
 ```
 
 Edit the name, subtitle, tagline and contact email in `src/data/site.ts`.
-A background image can be added later via the `.hero::before` rule in
-`src/pages/index.astro`.
+The hero background image is set via the `.hero::before` rule in
+`src/pages/index.astro` (currently `public/mx_keys.jpg`).
 
 ## Prerequisites
 
